@@ -22,7 +22,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
 
   const { startNewChallenge } = useContext(ChallengesContext);
 
-  const FULL_TIME = process.env.TIMER_TIME ? process.env.TIMER_TIME : (5);
+  const FULL_TIME = process.env.NEXT_PUBLIC_TIMER_TIME ? parseInt(process.env.NEXT_PUBLIC_TIMER_TIME) : (5);
 
   const [time, setTime] = useState(FULL_TIME);
   const [isActive, setIsActive] = useState(false);
